@@ -1,0 +1,60 @@
+{
+  "name": "@babbel/stylelint-config",
+  "version": "1.0.0",
+  "author": "Eric L. Goldstein <egoldstein@babbel.com>",
+  "description": "Hierarchical Stylelint configuration collection that intends to be simple to use, layered, and shared with others",
+  "keywords": [
+    "stylelint",
+    "stylelint-config"
+  ],
+  "engines": {
+    "node": "^18.12.0 || ^20.9.0 || >=22.11.0"
+  },
+  "packageManager": "bun@1.1.34",
+  "exports": {
+    ".": "./lib/stylelintBaseConfig.json",
+    "./css": "./lib/stylelintCssConfig.json",
+    "./css-modules": "./lib/stylelintCssModulesConfig.json",
+    "./scss": "./lib/stylelintScssConfig.json",
+    "./scss-modules": "./lib/stylelintScssModulesConfig.json",
+    "./styled-components": "./lib/stylelintStyledComponentsConfig.json"
+  },
+  "files": [
+    "lib/"
+  ],
+  "scripts": {
+    "check:environment": "bun run --silent check:environment:symlinks && bun run --silent check:environment:versions",
+    "check:environment:symlinks": "check-environment-symlinks",
+    "check:environment:versions": "check-environment-versions",
+    "check:formatting": "prettier --check --no-editorconfig .",
+    "check:package-version": "check-package-version",
+    "delete:node-modules": "rm -rf node_modules",
+    "delete:package-lock": "rm -f bun.lockb",
+    "format:code": "prettier --write --no-editorconfig .",
+    "install:bun:expected-version": "bun --print '(await import(Bun.env.npm_package_json)).packageManager.split(\"@\")[1]' | (read BUN_VERSION; if [ $BUN_VERSION == `bun --version` ]; then echo Bun version $BUN_VERSION is already installed; else echo Installing Bun version $BUN_VERSION... && curl -fsSL https://bun.sh/install | bash -s \"bun-v$BUN_VERSION\"; fi)",
+    "reinstall": "bun run --silent delete:package-lock && bun run --silent delete:node-modules && bun install",
+    "reinstall:use-lock-file": "bun run --silent delete:node-modules && bun install --frozen-lockfile"
+  },
+  "dependencies": {
+    "postcss-styled-syntax": "0.7.0",
+    "stylelint-config-css-modules": "4.4.0",
+    "stylelint-config-standard": "36.0.1",
+    "stylelint-config-standard-scss": "13.1.0",
+    "stylelint-declaration-block-no-ignored-properties": "2.8.0",
+    "stylelint-high-performance-animation": "1.10.0",
+    "stylelint-no-unsupported-browser-features": "8.0.2",
+    "stylelint-order": "6.0.4",
+    "stylelint-suitcss": "5.0.0"
+  },
+  "devDependencies": {
+    "@babbel/eslint-config": "2.1.1",
+    "@mangs/bun-utils": "2.33.2",
+    "eslint": "8.57.1",
+    "npm-run-all": "4.1.5",
+    "prettier": "3.3.3",
+    "stylelint": "16.10.0"
+  },
+  "peerDependencies": {
+    "stylelint": ">=16.0.0"
+  }
+}

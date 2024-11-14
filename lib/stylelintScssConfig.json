@@ -1,0 +1,6 @@
+{
+  "extends": ["stylelint-config-standard-scss", "./stylelintBaseConfig.json"],
+  "rules": {
+    "scss/selector-no-redundant-nesting-selector": [true, { "ignoreKeywords": ["when"] }]
+  }
+}

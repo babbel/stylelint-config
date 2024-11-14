@@ -4,7 +4,7 @@ Hierarchical Stylelint configuration collection that intends to be simple to use
 
 ## Stylelint Configurations
 
-If you're unfamiliar with [Stylelint](https://stylelint.io), it works very similarly to [ESLint](https://eslint.org) with some minor but unique changes in configuration syntax. You can read more about those [differences here](https://stylelint.io/user-guide/configure).
+If you're unfamiliar with [Stylelint](https://stylelint.io), it works similarly to [ESLint](https://eslint.org) with some minor but unique changes in configuration syntax. You can read more about those [differences here](https://stylelint.io/user-guide/configure).
 
 There are multiple configurations you can use in your projects listed below. Please note that the base configuration is used by all the others, so there's no need to include that in your configuration unless it's the only one you're using.
 

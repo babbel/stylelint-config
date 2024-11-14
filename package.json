@@ -47,11 +47,8 @@
     "stylelint-suitcss": "5.0.0"
   },
   "devDependencies": {
-    "@babbel/eslint-config": "2.1.1",
     "@mangs/bun-utils": "2.33.2",
-    "eslint": "8.57.1",
     "marked": "15.0.0",
-    "npm-run-all": "4.1.5",
     "prettier": "3.3.3",
     "stylelint": "16.10.0"
   },

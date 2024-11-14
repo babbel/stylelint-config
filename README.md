@@ -1,10 +1,10 @@
 # NPM module `@babbel/stylelint-config`
 
-Hierarchical Stylelint configuration collection that intends to be simple to use, layered, and shared with others [Maintained by the [Oranges Team](https://github.com/orgs/lessonnine/teams/oranges/members) and the [Pineapples Team](https://github.com/orgs/lessonnine/teams/pineapples/members)].
+Hierarchical Stylelint configuration collection that intends to be simple to use, layered, and shared with others [[maintainers]](/config/github/codeOwners)
 
 ## Stylelint Configurations
 
-If you're unfamiliar with Stylelint, it works very similarly to ESLint with some minor but unique changes in configuration syntax. You can read more about those differences [here](https://stylelint.io/user-guide/configure).
+If you're unfamiliar with [Stylelint](https://stylelint.io), it works very similarly to [ESLint](https://eslint.org) with some minor but unique changes in configuration syntax. You can read more about those [differences here](https://stylelint.io/user-guide/configure).
 
 There are multiple configurations you can use in your projects listed below. Please note that the base configuration is used by all the others, so there's no need to include that in your configuration unless it's the only one you're using.
 
@@ -87,19 +87,19 @@ For example, if you want to add an export called `@babbel/stylelint-config/examp
 ```jsonc
 {
   "exports": {
-    ...
+    /* ... */
     "example": "./lib/stylelintExampleConfig.json",
-    ...
-  }
+    /* ... */
+  },
 }
 ```
 
-- File a pull request and let the maintenance teams know. Be sure to at least extend from `lib/stylelintBaseConfig.json` or something more specific, or the addition of your contribution to the project will be delayed.
+- File a pull request. Be sure to at least extend from `lib/stylelintBaseConfig.json` or one of the more specific configs, otherwise the addition of your contribution to the project may be delayed.
 
 ## Final Thoughts
 
 These are just a few examples. Any configuration option in any Stylelint configuration can be overridden, so you can customize these as much as you want. If you find yourself or your team using a configuration set over and over again, consider submitting it to make it part of this collection.
 
-## Feedback Encouraged =D
+## Feedback Encouraged 🙂
 
-If you have any suggestions for improvements, please send them our way. 📫
+If you have any suggestions for improvements, please send them our way. We're interested in your ideas. 📫

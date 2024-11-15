@@ -1,0 +1,7 @@
+{
+  "extends": ["./stylelintCssConfig.json", "stylelint-config-css-modules"],
+  "rules": {
+    "order/properties-alphabetical-order": null,
+    "order/properties-order": [["composes"], { "unspecified": "bottomAlphabetical" }]
+  }
+}

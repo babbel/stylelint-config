@@ -13,6 +13,14 @@ jobs:
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version: "1.1.34"
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_IAM_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+      - uses: aws-actions/aws-secretsmanager-get-secrets@v2
+        with:
+          secret-ids: |
+            NPM_USER_ACCESS_TOKEN,${{ vars.NPM_USER_ACCESS_TOKEN_SECRET_ARN }}
       - uses: mangs/simple-release-notes-action@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -21,4 +29,4 @@ jobs:
         with:
           access: public
           registry: https://registry.npmjs.org/
-          token: ${{ secrets.NPM_USER_ACCESS_TOKEN }}
+          token: ${{ env.NPM_USER_ACCESS_TOKEN }}

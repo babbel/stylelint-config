@@ -2,10 +2,11 @@ name: Publish Workflow
 on:
   push:
     branches: [main]
-
 jobs:
   build:
     runs-on: ubuntu-24.04
+    permissions:
+      id-token: write
     steps:
       - name: CPU Details
         run: lscpu

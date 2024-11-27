@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.3
+
+- Fix improper GitHub Actions workflow variable: `vars.NPM_USER_ACCESS_TOKEN_SECRET_ARN` -> `vars.NPM_USER_ACCESS_TOKEN`
+
 ## 1.0.2
 
 - Fix missing OIDC write permission in GitHub Actions publish workflow. This prevents proper package publishing.

@@ -21,7 +21,7 @@ jobs:
       - uses: aws-actions/aws-secretsmanager-get-secrets@v2
         with:
           secret-ids: |
-            NPM_USER_ACCESS_TOKEN,${{ vars.NPM_USER_ACCESS_TOKEN_SECRET_ARN }}
+            NPM_USER_ACCESS_TOKEN,${{ vars.NPM_USER_ACCESS_TOKEN }}
       - uses: mangs/simple-release-notes-action@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

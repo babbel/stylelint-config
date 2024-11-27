@@ -1,6 +1,6 @@
 {
   "name": "@babbel/stylelint-config",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Eric L. Goldstein <egoldstein@babbel.com>",
   "description": "Hierarchical Stylelint configuration collection that intends to be simple to use, layered, and shared with others",
   "keywords": [

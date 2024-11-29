@@ -16,12 +16,12 @@ jobs:
           bun-version: "1.1.37"
       - uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ vars.AWS_IAM_ROLE_ARN }}
           aws-region: ${{ vars.AWS_REGION }}
+          role-to-assume: ${{ vars.AWS_IAM_ROLE_ARN }}
       - uses: aws-actions/aws-secretsmanager-get-secrets@v2
         with:
-          secret-ids: |
-            NPM_USER_ACCESS_TOKEN,${{ vars.NPM_USER_ACCESS_TOKEN }}
+          parse-json-secrets: true
+          secret-ids: NPM_USER,${{ vars.NPM_USER_SECRET_ARN }}
       - uses: mangs/simple-release-notes-action@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

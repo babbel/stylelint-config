@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.5
+
+- Add `write` permission to the GitHub Actions publish workflow to be able to create releases
+
 ## 1.0.4
 
 - Change how NPM user access token is being added into our GitHub Actions workflow environment

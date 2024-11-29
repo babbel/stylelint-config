@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.4
+
+- Change how NPM user access token is being added into our GitHub Actions workflow environment
+- Upgrade dependencies to latest versions
+
 ## 1.0.3
 
 - Fix improper GitHub Actions workflow variable: `vars.NPM_USER_ACCESS_TOKEN_SECRET_ARN` -> `vars.NPM_USER_ACCESS_TOKEN`

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.6
+
+- Publish package using OIDC trust
+
 ## 1.0.5
 
 - Add `write` permission to the GitHub Actions publish workflow to be able to create releases

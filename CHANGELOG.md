@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.7
+
+- bump up JS-DevTools/npm-publish version
+
 ## 1.0.6
 
 - Publish package using OIDC trust

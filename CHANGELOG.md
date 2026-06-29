@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.7
+
+- Publish to NPM registry using long-lived token
+
 ## 1.0.6
 
 - Publish package using OIDC trust

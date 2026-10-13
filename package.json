@@ -47,7 +47,7 @@
     "stylelint-suitcss": "5.0.0"
   },
   "devDependencies": {
-    "@mangs/bun-utils": "2.33.2",
+    "@mangs/bun-utils": "2.33.3",
     "marked": "15.0.3",
     "prettier": "3.4.1",
     "stylelint": "16.11.0"
